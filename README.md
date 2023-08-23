@@ -1,27 +1,51 @@
-# React + TypeScript + Vite
+# Space X APP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
-Currently, two official plugins are available:
+![GitHub repo size](https://img.shields.io/github/repo-size/elvesbd/space-frontend?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/elvesbd/space-frontend?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/elvesbd/space-frontend?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues-raw/elvesbd/space-frontend?style=for-the-badge)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/elvesbd/space-frontend?style=for-the-badge)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img src="https://i.imgur.com/DC6T8S2.png" alt="exemplo imagem">
 
-## Expanding the ESLint configuration
+# Projeto SpaceX APP
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Bem-vindo ao README do projeto SpaceX APP! Este projeto tem como objetivo fornecer informações sobre os lançamentos da SpaceX e estatísticas dos foguetes.
 
-- Configure the top-level `parserOptions` property like this:
+## Integração com API
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Começando
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Para começar com o projeto SpaceX APP, siga estas etapas:
+
+1. Clone este repositório para o seu ambiente local.
+2. Instale as dependências necessárias usando `npm install` ou `yarn install`.
+3. Execute o aplicativo usando `npm run dev` ou `yarn dev`.
+
+## Conclusão
+
+Este projeto demonstra o uso da API SpaceX para consultar dados informativos sobre os lançamentos da SpaceX e estatísticas dos foguetes.
+Para quaisquer dúvidas ou comentários, sinta-se à vontade para entrar em contato!
+
+## 🤝 Colaborador
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://github.com/elvesbd.png" width="100px;" alt="Foto do Elves Brito no GitHub"/><br>
+        <sub>
+          <b>Elves Brito</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+## 📝 Licença
+
+Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
+
+[⬆ Voltar ao topo](#Fincheck)<br>
