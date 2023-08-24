@@ -10,8 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@nivo/bar": "^0.83.0",
+    "@nivo/core": "^0.83.0",
+    "@nivo/pie": "^0.83.0",
+    "@tremor/react": "^3.6.5",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.268.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-google-charts": "^4.0.1",
+    "react-paginate": "^8.2.0",
     "react-router-dom": "^6.15.0",
     "tailwind-merge": "^1.14.0"
   },
