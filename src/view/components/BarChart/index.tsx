@@ -1,5 +1,6 @@
 import { ResponsiveBar } from "@nivo/bar";
 
+
 const data = [
   {
     "year": "2001",
