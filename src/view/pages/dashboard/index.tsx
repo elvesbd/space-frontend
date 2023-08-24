@@ -5,9 +5,16 @@ import { Launches } from "../../components/Launches";
 import { Pagination } from "../../components/Pagination";
 import { ResultLaunches } from "../../components/ResultLaunches";
 import { SearchLaunches } from "../../components/SearchLaunches";
+import { useEffect, useState } from "react";
 
 
 export function DashBoard() {
+  const [launches, setLaunches] = useState({})
+
+  useEffect(() => {
+    
+  }, [])
+
   return (
     <div className="w-[500px] md:w-[880px] p-3 md:p-2 grid grid-cols-1 gap-9 items-center justify-center m-auto">
       <div>
