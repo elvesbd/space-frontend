@@ -2,7 +2,8 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}"
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@tremor/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -13,7 +14,7 @@ export default {
           200: '#E9ECEF',
           300: '#DEE2E6',
           400: '#CED4DA',
-          500: '#ADB5BD',
+          500: '#6C757D',
           600: '#868E96',
           700: '#495057',
           800: '#343A40',
@@ -59,32 +60,6 @@ export default {
           900: '#2B8A3E',
         },
 
-        lime: {
-          50: '#F4FCE3',
-          100: '#E9FAC8',
-          200: '#D8F5A2',
-          300: '#C0EB75',
-          400: '#A9E34B',
-          500: '#94D82D',
-          600: '#82C91E',
-          700: '#74B816',
-          800: '#66A80F',
-          900: '#5C940D',
-        },
-
-        yellow: {
-          50: '#FFF9DB',
-          100: '#FFF3BF',
-          200: '#FFEC99',
-          300: '#FFE066',
-          400: '#FFD43B',
-          500: '#FCC419',
-          600: '#FAB005',
-          700: '#F59F00',
-          800: '#F08C00',
-          900: '#E67700',
-        },
-
         orange: {
           50: '#FFF4E6',
           100: '#FFE8CC',
@@ -98,33 +73,13 @@ export default {
           900: '#D9480F',
         },
       },
-      keyframes: {
-        slideUpAndFade: {
-          from: { opacity: 0, transform: 'translateY(2px)' },
-          to: { opacity: 1, transform: 'translateY(0)' },
-        },
-        slideDownAndFade: {
-          from: { opacity: 0, transform: 'translateY(-2px)' },
-          to: { opacity: 1, transform: 'translateY(0)' },
-        },
-        overLayShow: {
-          from: { opacity: 0 },
-          to: { opacity: 1 },
-        },
-        contentShow: {
-          from: { opacity: 0, transform: 'translateY(-50%, -48%) scale(0,96)' },
-          to: { opacity: 1, transform: 'translateY(-50%, -50%) scale(1)' },
-        },
-      },
-      animation: {
-        'slide-up-and-fade': 'slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
-        'slide-down-and-fade': 'slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
-        'over-lay-show': 'overLayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)',
-        'content-show': 'contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)',
-      },
       fontFamily: {
         sans: ['DM Sans', 'sans-serif']
-      }
+      },
+      gridTemplateColumns: {
+        'search': '3fr, 1fr',
+        'table': '50px, 1fr, 1fr, 130px, repeat(3, 1fr)'
+      },
     },
   },
   plugins: [],
