@@ -14,7 +14,7 @@ export function DashBoard() {
         <Header />
       </div>
 
-      <div className="p-2 grid grid-cols-1 gap-4 h-[600px] md:grid-cols-2 md:h-[300px] ">
+      <div className="p-2 grid grid-cols-1 gap-8 md:gap-12 h-[600px] md:grid-cols-2 md:h-[300px] ">
         <div className="bg-gray-500 grid grid-cols-1 justify-center relative] ">
           <span className="font-bold text-center">Lançamentos de foguetes</span>
           <PieChart />
