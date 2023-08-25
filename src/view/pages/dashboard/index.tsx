@@ -1,20 +1,13 @@
 import { Header } from "../../components/Header";
 import { PieChart } from "../../components/PieChart";
 import { BarChart } from "../../components/BarChart";
-import { Launches } from "../../components/Launches";
+import { LaunchesDetails } from "../../components/LaunchesDetails";
 import { Pagination } from "../../components/Pagination";
 import { ResultLaunches } from "../../components/ResultLaunches";
 import { SearchLaunches } from "../../components/SearchLaunches";
-import { useEffect, useState } from "react";
 
 
 export function DashBoard() {
-  const [launches, setLaunches] = useState({})
-
-  useEffect(() => {
-    
-  }, [])
-
   return (
     <div className="w-[500px] md:w-[880px] p-3 md:p-2 grid grid-cols-1 gap-9 items-center justify-center m-auto">
       <div>
@@ -46,7 +39,7 @@ export function DashBoard() {
       </div>
       
       <div className="bg-gray-500 h-auto p-2 grid grid-cols-1 gap-4 text-center text-xs font-bold">
-        <Launches />
+        <LaunchesDetails />
        
         <nav className="flex items-center justify-end py-4 bg-gray-500">
           <div className="flex mt-1">

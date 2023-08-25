@@ -5,11 +5,9 @@ export function Launch() {
   return (
     <>
       <div className="grid grid-cols-table bg-gray-400 items-center rounded-sm font-semibold md:grid-cols-table">
-        <div className="grid-area">
-          184
-        </div>
+        <div>184</div>
         <div>
-        <div className="grid-area-">
+        <div>
           <img
             src={earthLogo}
             alt="Imagem do globo terrestre"
@@ -17,17 +15,17 @@ export function Launch() {
           />
         </div>
         </div>
-        <div className="grid-area-">
+        <div className="-">
           Starlink 4-27 (v1.5)
         </div>
-        <div className="grid-area-">
+        <div className="-">
           05/10/2022
         </div>
         <div className="">
           Used Falcon 1
         </div>
-        <div className="text-white flex justify-center font-bold p-1 uppercase grid-area-4">
-        <div className="bg-green-600 p-1 grid-area-">
+        <div className="text-white flex justify-center font-bold p-1 uppercase -4">
+        <div className="bg-green-600 p-1">
           Sucesso
         </div>
         </div>

@@ -1,48 +1,15 @@
 import { ResponsiveBar } from "@nivo/bar";
+import { useBarStats } from "../../../app/hooks/useBarStats";
 
-
-const data = [
-  {
-    "year": "2001",
-    "used falcon 9": 10,
-    "new falcon 9": 20,
-    "falcon 1": 150,
-    "falcon heavy": 4,
-  },
-  {
-    "year": "2002",
-    "used falcon 9": 10,
-    "new falcon 9": 20,
-    "falcon 1": 188,
-    "falcon heavy": 4,
-  },
-  {
-    "year": "2003",
-    "used falcon 9": 10,
-    "new falcon 9": 20,
-    "falcon 1": 188,
-    "falcon heavy": 4,
-  },
-  {
-    "year": "2004",
-    "used falcon 9": 1000,
-    "new falcon 9": 20,
-    "falcon 1": 188,
-    "falcon heavy": 4,
-  },
-  {
-    "year": "2005",
-    "used falcon 9": 1000,
-    "new falcon 9": 20,
-    "falcon 1": 188,
-    "falcon heavy": 4,
-  },
-]
 
 export function BarChart() {
+  const { data, keysWithoutYear } = useBarStats()
+  const launches = data?.launches
+  if (!launches) return
+
   return (
     <ResponsiveBar
-      data={data}
+      data={launches}
       theme={{
         axis: {
           domain: {
@@ -69,12 +36,7 @@ export function BarChart() {
         ["#000000", "#F57C00", "#1267FC", "#F47560"]
       }
       groupMode="grouped"
-      keys={[
-        "used falcon 9",
-        "new falcon 9",
-        "falcon 1",
-        "falcon heavy",
-      ]}
+      keys={keysWithoutYear}
       defs={[
         {
           id: "year"

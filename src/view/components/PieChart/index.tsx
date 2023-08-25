@@ -1,31 +1,18 @@
 import { ResponsivePie } from '@nivo/pie'
+import { usePieStats } from '../../../app/hooks/usePieStats'
 
-
-const data = [
-  {
-    "id": "usedFalco9",
-    "label": "Used Falcon 9",
-    "value": 60,
-  },
-  {
-    "id": "newFalcon9",
-    "label": "New Falcon 9",
-    "value": 15,
-  },
-  {
-    "id": "falcon1",
-    "label": "Falcon 1",
-    "value": 15,
-  },
-  {
-    "id": "falconHeavy",
-    "label": "Falcon Heavy",
-    "value": 10,
-  },
-]
 
 export function PieChart() {
-  return (
+  const { launches } = usePieStats()
+  if (!launches) return
+
+  const data = launches.rocketLaunchCounts.map(launch => ({
+    id: launch.rocket,
+    label: launch.name,
+    value: launch.totalCount
+  }))
+ 
+  return (   
     <ResponsivePie
       data={data}
       theme={{
@@ -44,52 +31,6 @@ export function PieChart() {
       }
       enableArcLinkLabels={false}
       isInteractive={false}
-      defs={[
-        {
-          id: 'dots',
-          type: 'patternDots',
-          background: 'inherit',
-          color: 'rgba(255, 255, 255, 0.3)',
-          size: 50,
-          padding: 1,
-          stagger: true
-        },
-        {
-          id: 'lines',
-          type: 'patternLines',
-          background: 'inherit',
-          color: 'rgba(255, 255, 255, 0.3)',
-          rotation: -45,
-          lineWidth: 6,
-          spacing: 10
-        }
-      ]}
-      fill={[
-        {
-          match: {
-            id: 'UsedFalcon9',
-          },
-          id: 'dots'
-        },
-        {
-          match: {
-            id: 'New Falcon 9'
-          },
-          id: 'dots'
-        },
-        {
-          match: {
-            id: 'go'
-          },
-          id: 'dots'
-        },
-        {
-          match: {
-            id: 'go'
-          },
-          id: 'dots'
-        },
-      ]}
       legends={[
         {
           anchor: 'bottom',
