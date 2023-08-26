@@ -1,13 +1,16 @@
-import { useLaunchesDetails } from './useLaunchesDetails'
 import youtubeImg from '../../../assets/youtube-logo.png'
 import earthLogo from '../../../assets/earth.png'
 import emptyStateImage from '../../../assets/empty-state.svg'
 import { cn, formatDate } from '../../../app/utils'
+import { Launch } from '../../../app/services/launches/get-all/interfaces'
 
 
-export function LaunchesDetails() {
-const { launches } = useLaunchesDetails()
-const hasLaunches = launches.length > 0;
+interface LaunchesDetailsProps {
+  launches: Launch[];
+}
+
+export function LaunchesDetails({ launches }: LaunchesDetailsProps) {
+const hasLaunches = launches?.length > 0;
 
 return (
    <div className="flex flex-col gap-2">
@@ -25,7 +28,7 @@ return (
         <div className="flex flex-col items-center justify-center h-full mt-2">
           <img
             src={emptyStateImage}
-            alt="Imagem de uma mulher com uma lupa informando que não foi encontrado nenhuma transação"
+            alt="Imagem de uma mulher com uma lupa informando que não foi encontrado nenhum lançamento"
           />
           <p className="text-black">Não encontramos nenhum lançamento!</p>
         </div>
@@ -38,13 +41,11 @@ return (
           </div>
 
           <div>
-            <div>
-              <img
-                src={earthLogo}
-                alt="Imagem do globo terrestre"
-                className="w-4 inline-block"
-              />
-            </div>
+            <img
+              src={earthLogo}
+              alt="Imagem do globo terrestre"
+              className="w-4 inline-block"
+            />
           </div>
 
           <div>{launch.missionName}</div>

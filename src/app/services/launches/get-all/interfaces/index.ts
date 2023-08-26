@@ -7,7 +7,7 @@ export interface Launches {
   hasPrev: boolean;
 }
 
-interface Launch {
+export interface Launch {
   youtubeLink: string;
   success: boolean;
   flightNumber: number;

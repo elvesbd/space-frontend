@@ -77,7 +77,7 @@ export default {
         sans: ['DM Sans', 'sans-serif']
       },
       gridTemplateColumns: {
-        'search': '3fr, 1fr',
+        'search': '4fr, 1fr',
         'table': '50px, 1fr, 1fr, 130px, repeat(3, 1fr)'
       },
     },

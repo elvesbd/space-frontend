@@ -5,7 +5,7 @@ import { useBarStats } from "../../../app/hooks/useBarStats";
 export function BarChart() {
   const { data, keysWithoutYear } = useBarStats()
   const launches = data?.launches
-  if (!launches) return
+  if (!launches) return  
 
   return (
     <ResponsiveBar

@@ -36,7 +36,7 @@ export function PieChart() {
           anchor: 'bottom',
           direction: 'column',
           justify: false,
-          translateX: -205,
+          translateX: -210,
           translateY: -120,
           itemsSpacing: 16,
           itemWidth: 100,

@@ -5,19 +5,24 @@ import { Spinner } from "../Spinner";
 
 interface ButtonProps extends ComponentProps<'button'> {
   isLoading?: boolean;
+  className?: string;
 }
 
 export function Button({ children, className, isLoading, ...props }: ButtonProps) {
   return (
-    <button
-      {...props}
-      className={cn(
-        "bg-orange-600 hover:bg-orange-700 disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed rounded-lg font-medium text-white transition-all hidden md:block",
-        className
-      )}
-    >
-      {!isLoading && children}
-      {isLoading && <Spinner className="w-6 h-6"/>}
-    </button>
+      <button
+        {...props}
+        className={cn(
+          "bg-orange-600 hover:bg-orange-700 disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed rounded-lg text-black font-semibold transition-all hidden md:block h-9",
+          className
+        )}
+      >
+        {!isLoading && children}
+        {isLoading && (
+          <div className="flex justify-center">
+            <Spinner className="w-6 h-6"/>
+          </div>
+        )}
+      </button>
   )
 }

@@ -1,10 +1,8 @@
 import { Header } from "../../components/Header";
 import { PieChart } from "../../components/PieChart";
 import { BarChart } from "../../components/BarChart";
-import { LaunchesDetails } from "../../components/LaunchesDetails";
-import { Pagination } from "../../components/Pagination";
-import { ResultLaunches } from "../../components/ResultLaunches";
-import { SearchLaunches } from "../../components/SearchLaunches";
+import { LaunchesResult } from "../../components/LaunchesResult";
+import { LaunchRegisters } from "../../components/LaunchRegisters";
 
 
 export function DashBoard() {
@@ -19,8 +17,8 @@ export function DashBoard() {
           <span className="font-bold text-center">Lançamentos de foguetes</span>
           <PieChart />
 
-          <div className="w-[133px] absolute sm:absolute top-[270px] ml-9 mt-2 text-[14px] text-gra md:top-[270px] md:ml-3 md:mt-2">
-            <ResultLaunches />
+          <div className="w-[133px] absolute sm:absolute top-[270px] ml-9 mt-2 text-[14px] text-gra md:top-[270px] md:ml-2.5 md:mt-2">
+            <LaunchesResult />
           </div>
         </div>
 
@@ -34,18 +32,8 @@ export function DashBoard() {
         <h1 className="text-white font-bold">Registros de lançamentos</h1>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-search gap-4">
-        <SearchLaunches />
-      </div>
-      
-      <div className="bg-gray-500 h-auto p-2 grid grid-cols-1 gap-4 text-center text-xs font-bold">
-        <LaunchesDetails />
-       
-        <nav className="flex items-center justify-end py-4 bg-gray-500">
-          <div className="flex mt-1">
-            <Pagination />
-          </div>
-        </nav>
+      <div className="grid md:grid-cols-1 gap-10">
+        <LaunchRegisters />
       </div>
       
       <div className="flex items-center justify-center">
