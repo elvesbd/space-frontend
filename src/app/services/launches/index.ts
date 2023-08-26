@@ -1,10 +1,10 @@
-import { getAll } from "./get-all";
-import { getStatsBar } from "./stats-bar";
-import { getStatsPie } from "./stats-pie";
+import { fetchAllRocketLaunches } from "./fetch-all-rocket-launches";
+import { fetchRocketLaunchPieStats } from "./fetch-rocket-launch-pie-stats";
+import { fetchYearlyRocketLaunchStats } from "./fetch-yearly-rocket-launch-stats";
 
 
 export const launchesService = {
-  getAll,
-  getStatsPie,
-  getStatsBar
+  fetchAllRocketLaunches,
+  fetchRocketLaunchPieStats,
+  fetchYearlyRocketLaunchStats
 }

@@ -1,6 +1,6 @@
-import { YearlyRocketLaunches } from "./interfaces";
+import { YearlyRocketLaunchStats } from "./interfaces";
 
-interface GetStatsBarProps {
+interface YearlyRocketLaunchStatsBar {
   launches: Launches[];
   keysWithoutYear: string[];
 }
@@ -10,8 +10,8 @@ interface Launches {
   [rocketId: string]: number | string;
 }
 
-class StatsBarMapper {
-  toPersistence(domainLaunch: YearlyRocketLaunches): GetStatsBarProps {
+class YearlyRocketLaunchStatsMapper {
+  static toPersistence(domainLaunch: YearlyRocketLaunchStats): YearlyRocketLaunchStatsBar {
     const launches: Launches[] = [];
     for (const entry of domainLaunch) {
       const launch: Launches = {
@@ -40,4 +40,4 @@ class StatsBarMapper {
   }
 }
 
-export default new StatsBarMapper();
+export default YearlyRocketLaunchStatsMapper;

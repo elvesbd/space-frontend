@@ -2,7 +2,7 @@ import youtubeImg from '../../../assets/youtube-logo.png'
 import earthLogo from '../../../assets/earth.png'
 import emptyStateImage from '../../../assets/empty-state.svg'
 import { cn, formatDate } from '../../../app/utils'
-import { Launch } from '../../../app/services/launches/get-all/interfaces'
+import { Launch } from '../../../app/services/launches/fetch-all-rocket-launches/interfaces'
 
 
 interface LaunchesDetailsProps {

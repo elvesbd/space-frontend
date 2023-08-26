@@ -1,4 +1,4 @@
-export interface RocketLaunches {
+export interface RocketLaunchStats {
   rocketLaunchCounts: RocketLaunchCount[]
   successRocketLaunches: number
   failureRocketLaunches: number

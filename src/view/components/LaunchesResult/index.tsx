@@ -1,7 +1,7 @@
-import { usePieStats } from "../../../app/hooks/usePieStats";
+import { usePieChartStats } from "../../../app/hooks/usePieChartStats";
 
 export function LaunchesResult() {
-  const { launches } = usePieStats();
+  const { launches } = usePieChartStats();
 
   return (
    <>

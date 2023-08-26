@@ -1,9 +1,9 @@
 import { ResponsiveBar } from "@nivo/bar";
-import { useBarStats } from "../../../app/hooks/useBarStats";
+import { useBarChartStats } from "../../../app/hooks";
 
 
 export function BarChart() {
-  const { data, keysWithoutYear } = useBarStats()
+  const { data, keysWithoutYear } = useBarChartStats()
   const launches = data?.launches
   if (!launches) return  
 

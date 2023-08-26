@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { launchesService } from "../services/launches";
 
-export function usePieStats() {
+export function usePieChartStats() {
   const { data, isFetching, isLoading } = useQuery({
-    queryKey: ['launches', 'stats', 'pie'],
-    queryFn: launchesService.getStatsPie
+    queryKey: ['rocket-launches', 'stats', 'pie'],
+    queryFn: launchesService.fetchRocketLaunchPieStats
   })
 
   return {

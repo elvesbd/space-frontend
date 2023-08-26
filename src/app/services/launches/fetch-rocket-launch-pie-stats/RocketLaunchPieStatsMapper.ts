@@ -1,6 +1,6 @@
-import { RocketLaunches } from "./interfaces";
+import { RocketLaunchStats } from "./interfaces";
 
-interface GetStatsPieProps {
+interface RocketLaunchStatsPie {
   rocketLaunchCounts: RocketLaunchCounts[],
   successRocketLaunches: number;
   failureRocketLaunches: number;
@@ -12,9 +12,9 @@ interface RocketLaunchCounts {
   totalCount: number;
 }
 
-class StatsPierMapper {
-  toPersistence(domainLaunch: RocketLaunches): GetStatsPieProps {
-  const modifiedData: GetStatsPieProps = {
+class RocketLaunchPieStatsMapper {
+  static toPersistence(domainLaunch: RocketLaunchStats): RocketLaunchStatsPie {
+  const modifiedData: RocketLaunchStatsPie = {
     ...domainLaunch,
     rocketLaunchCounts: domainLaunch.rocketLaunchCounts.map(rocketLaunch => ({
       rocket: rocketLaunch.rocket,
@@ -26,4 +26,4 @@ class StatsPierMapper {
   }
 }
 
-export default new StatsPierMapper();
+export default RocketLaunchPieStatsMapper;

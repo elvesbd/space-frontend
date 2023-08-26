@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import toast from 'react-hot-toast';
 import { Button } from "../Button";
 import { InputSearch } from "../InputSearch";
 import { LaunchesDetails } from "../LaunchesDetails";
 import { Pagination } from "../Pagination";
-import { Launch } from "../../../app/services/launches/get-all/interfaces";
+import { Launch } from "../../../app/services/launches/fetch-all-rocket-launches/interfaces";
 import { launchesService } from "../../../app/services/launches";
 
 export function LaunchRegisters() {
@@ -14,14 +15,14 @@ export function LaunchRegisters() {
     const fetchLaunches = async () => {
       try {
         if (!searchTerm) {
-          const { results } = await launchesService.getAll();
+          const { results } = await launchesService.fetchAllRocketLaunches();
           setLaunches(results);
         } else {
-          const { results } = await launchesService.getAll(searchTerm);
+          const { results } = await launchesService.fetchAllRocketLaunches(searchTerm);
           setLaunches(results);
         }
       } catch (error) {
-        console.error("Erro ao buscar lançamentos:", error);
+        toast.error("Nenhum lançamento de foguete encontrado!")
       }
     };
 

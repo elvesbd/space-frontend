@@ -1,9 +1,9 @@
 import { ResponsivePie } from '@nivo/pie'
-import { usePieStats } from '../../../app/hooks/usePieStats'
+import { usePieChartStats } from '../../../app/hooks/usePieChartStats'
 
 
 export function PieChart() {
-  const { launches } = usePieStats()
+  const { launches } = usePieChartStats()
   if (!launches) return
 
   const data = launches.rocketLaunchCounts.map(launch => ({
