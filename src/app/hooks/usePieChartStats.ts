@@ -2,14 +2,24 @@ import { useQuery } from "@tanstack/react-query";
 import { launchesService } from "../services/launches";
 
 export function usePieChartStats() {
-  const { data, isFetching, isLoading } = useQuery({
+  const { data } = useQuery({
     queryKey: ['rocket-launches', 'stats', 'pie'],
     queryFn: launchesService.fetchRocketLaunchPieStats
   })
 
+  const rocketLaunchCounts = data?.rocketLaunchCounts
+  const launches = rocketLaunchCounts?.map(launch => ({
+    id: launch.rocket,
+    label: launch.name,
+    value: launch.totalCount
+  }))
+
+  const successRocketLaunches = data?.successRocketLaunches
+  const failureRocketLaunches = data?.failureRocketLaunches
+
   return {
-    launches: data,
-    isFetching,
-    isLoading
+    launches,
+    successRocketLaunches,
+    failureRocketLaunches,
   }
 }

@@ -4,25 +4,30 @@ import { Button } from "../Button";
 import { InputSearch } from "../InputSearch";
 import { LaunchesDetails } from "../LaunchesDetails";
 import { Pagination } from "../Pagination";
-import { Launch } from "../../../app/services/launches/fetch-all-rocket-launches/interfaces";
+import { Launch, Launches } from "../../../app/services/launches/fetch-all-rocket-launches/interfaces";
 import { launchesService } from "../../../app/services/launches";
 
 export function LaunchRegisters() {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [launches, setLaunches] = useState<Launch[]>([])
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchLaunches = async () => {
       try {
+        setIsLoading(true);
+        let response: Launches;
         if (!searchTerm) {
-          const { results } = await launchesService.fetchAllRocketLaunches();
-          setLaunches(results);
+          response = await launchesService.fetchAllRocketLaunches();
         } else {
-          const { results } = await launchesService.fetchAllRocketLaunches(searchTerm);
-          setLaunches(results);
+          response = await launchesService.fetchAllRocketLaunches(searchTerm);
         }
+
+        setLaunches(response.results)
       } catch (error) {
         toast.error("Nenhum lançamento de foguete encontrado!")
+      } finally {
+        setIsLoading(false)
       }
     };
 
@@ -38,7 +43,7 @@ export function LaunchRegisters() {
       <div className="grid grid-cols-1 md:grid-cols-search items-start gap-4">
         <InputSearch onSearch={handleSearch} />
 
-        <Button>Buscar</Button>
+        <Button isLoading={isLoading}>Buscar</Button>
       </div>
         
       <div className="bg-gray-500 h-auto p-2 grid grid-cols-1 gap-4 text-center text-xs font-bold">

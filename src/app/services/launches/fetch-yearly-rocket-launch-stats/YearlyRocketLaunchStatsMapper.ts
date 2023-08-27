@@ -2,7 +2,7 @@ import { YearlyRocketLaunchStats } from "./interfaces";
 
 interface YearlyRocketLaunchStatsBar {
   launches: Launches[];
-  keysWithoutYear: string[];
+  yearKey: string[];
 }
 
 interface Launches {
@@ -25,17 +25,17 @@ class YearlyRocketLaunchStatsMapper {
       launches.push(launch);
     }
   
-    const keysWithoutYear: string[] = [];
+    const yearKey: string[] = [];
   
     for (const obj of launches) {
       const keys = Object.keys(obj);
       const keysToPush = keys.filter(key => key !== "year");
-      keysWithoutYear.push(...keysToPush);
+      yearKey.push(...keysToPush);
     }
   
     return {
       launches,
-      keysWithoutYear
+      yearKey
     };
   }
 }

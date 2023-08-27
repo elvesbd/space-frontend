@@ -14,7 +14,7 @@ interface RocketLaunchCounts {
 
 class RocketLaunchPieStatsMapper {
   static toPersistence(domainLaunch: RocketLaunchStats): RocketLaunchStatsPie {
-  const modifiedData: RocketLaunchStatsPie = {
+  const modifiedData = {
     ...domainLaunch,
     rocketLaunchCounts: domainLaunch.rocketLaunchCounts.map(rocketLaunch => ({
       rocket: rocketLaunch.rocket,

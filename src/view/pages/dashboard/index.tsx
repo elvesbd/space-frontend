@@ -1,6 +1,6 @@
 import { Header } from "../../components/Header";
-import { PieChart } from "../../components/PieChart";
-import { BarChart } from "../../components/BarChart";
+import { LaunchPieChart } from "../../components/LaunchPieChart";
+import { LaunchBarChart } from "../../components/LaunchBarChart";
 import { LaunchesResult } from "../../components/LaunchesResult";
 import { LaunchRegisters } from "../../components/LaunchRegisters";
 
@@ -15,7 +15,7 @@ export function DashBoard() {
       <div className="p-2 grid grid-cols-1 gap-8 md:gap-12 h-[600px] md:grid-cols-2 md:h-[300px] ">
         <div className="bg-gray-500 grid grid-cols-1 justify-center relative] ">
           <span className="font-bold text-center">Lançamentos de foguetes</span>
-          <PieChart />
+          <LaunchPieChart />
 
           <div className="w-[133px] absolute sm:absolute top-[270px] ml-9 mt-2 text-[14px] text-gra md:top-[270px] md:ml-2.5 md:mt-2">
             <LaunchesResult />
@@ -24,7 +24,7 @@ export function DashBoard() {
 
         <div className="bg-gray-500 flex flex-col items-center">
           <span className="font-bold">Lançamentos por ano</span>
-          <BarChart />
+          <LaunchBarChart />
         </div>
       </div>
 

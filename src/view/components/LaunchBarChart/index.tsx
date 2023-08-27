@@ -2,9 +2,8 @@ import { ResponsiveBar } from "@nivo/bar";
 import { useBarChartStats } from "../../../app/hooks";
 
 
-export function BarChart() {
-  const { data, keysWithoutYear } = useBarChartStats()
-  const launches = data?.launches
+export function LaunchBarChart() {
+  const { launches, yearKey } = useBarChartStats()
   if (!launches) return  
 
   return (
@@ -36,7 +35,7 @@ export function BarChart() {
         ["#000000", "#F57C00", "#1267FC", "#F47560"]
       }
       groupMode="grouped"
-      keys={keysWithoutYear}
+      keys={yearKey}
       defs={[
         {
           id: "year"

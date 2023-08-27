@@ -1,1 +1,1 @@
-export const basePath = "/rocket-launches"
+export const baseApiPath = "/rocket-launches"
