@@ -33,7 +33,7 @@ export function LaunchBarChart() {
         },
       }}
       colors={
-        ["#3498DB", "#2C3E50", "#E74C3C"]
+        ["#1971C2", "#2C3E50", "#E8590C"]
       }
       groupMode="grouped"
       keys={yearKey}
