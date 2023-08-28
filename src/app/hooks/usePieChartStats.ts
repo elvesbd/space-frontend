@@ -9,8 +9,8 @@ export function usePieChartStats() {
 
   const rocketLaunchCounts = data?.rocketLaunchCounts
   const launches = rocketLaunchCounts?.map(launch => ({
-    id: launch.rocket,
-    label: launch.name,
+    id: launch.rocketId,
+    label: launch.rocketName,
     value: launch.totalCount
   }))
 

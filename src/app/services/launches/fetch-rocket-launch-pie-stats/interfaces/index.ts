@@ -1,12 +1,12 @@
 export interface RocketLaunchStats {
   rocketLaunchCounts: RocketLaunchCount[]
-  successRocketLaunches: number
-  failureRocketLaunches: number
+  successCount: number
+  failureCount: number
 }
 
 interface RocketLaunchCount {
-  rocket: string
-  name: string
+  rocketId: string;
+  rocketName: string;
   successCount: number
   failureCount: number
 }

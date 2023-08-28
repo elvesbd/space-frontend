@@ -49,7 +49,7 @@ return (
           </div>
 
           <div>{launch.missionName}</div>
-          <div>{formatDate(launch.date)}</div>
+          <div>{formatDate(launch.dateLaunch)}</div>
           <div>{launch.rocketName}</div>
 
           <div className="text-white flex justify-center font-bold p-1 uppercase">

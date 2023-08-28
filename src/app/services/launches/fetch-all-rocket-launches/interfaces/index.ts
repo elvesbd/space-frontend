@@ -8,10 +8,12 @@ export interface Launches {
 }
 
 export interface Launch {
-  youtubeLink: string;
-  success: boolean;
+  launchId: string;
   flightNumber: number;
   missionName: string;
-  date: string;
+  dateLaunch: string;
+  rocketId: string;
   rocketName: string;
+  success: boolean;
+  youtubeLink: string;
 }

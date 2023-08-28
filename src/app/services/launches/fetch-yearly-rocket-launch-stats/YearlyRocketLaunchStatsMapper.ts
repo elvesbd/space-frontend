@@ -19,7 +19,7 @@ class YearlyRocketLaunchStatsMapper {
       };
     
       for (const rocketCount of entry.rocketCounts) {
-        launch[rocketCount.rocket] = rocketCount.launchTotal;
+        launch[rocketCount.rocketId] = rocketCount.launchTotal;
       }
     
       launches.push(launch);

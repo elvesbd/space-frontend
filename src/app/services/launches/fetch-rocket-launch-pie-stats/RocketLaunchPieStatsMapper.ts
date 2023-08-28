@@ -7,22 +7,23 @@ interface RocketLaunchStatsPie {
 }
 
 interface RocketLaunchCounts {
-  rocket:string;
-  name: string;
+  rocketId:string;
+  rocketName: string;
   totalCount: number;
 }
 
 class RocketLaunchPieStatsMapper {
   static toPersistence(domainLaunch: RocketLaunchStats): RocketLaunchStatsPie {
-  const modifiedData = {
-    ...domainLaunch,
-    rocketLaunchCounts: domainLaunch.rocketLaunchCounts.map(rocketLaunch => ({
-      rocket: rocketLaunch.rocket,
-      name: rocketLaunch.name,
-      totalCount: (rocketLaunch.successCount || 0) + (rocketLaunch.failureCount || 0)
-    }))
-  };
-    return modifiedData
+    const modifiedData: RocketLaunchStatsPie = {
+      successRocketLaunches: domainLaunch.successCount,
+      failureRocketLaunches: domainLaunch.failureCount,
+      rocketLaunchCounts: domainLaunch.rocketLaunchCounts.map(rocketLaunch => ({
+        rocketId: rocketLaunch.rocketId,
+        rocketName: rocketLaunch.rocketName,
+        totalCount: rocketLaunch.successCount + rocketLaunch.failureCount,
+      })),
+    };
+    return modifiedData;
   }
 }
 

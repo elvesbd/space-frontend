@@ -6,6 +6,6 @@ export interface YearlyRocketLaunchCount {
 }
 
 export interface RocketLaunchCount {
-  rocket: string
+  rocketId: string
   launchTotal: number
 }
