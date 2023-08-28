@@ -4,12 +4,12 @@ import { launchesService } from '../services/launches';
 import toast from 'react-hot-toast';
 
 export interface LaunchContextValue {
-  launches: Launch[];
-  launchesResults: Launches | null;
+  rocketLaunches: Launch[];
+  launchPagination: Launches | null;
   isLoading: boolean;
   fetchLaunches: (page: number) => void;
-  setLaunches: (launches: Launch[]) => void;
-  setLaunchesResults: (launchesResults: Launches | null) => void;
+  setRocketLaunches: (launches: Launch[]) => void;
+  setLaunchPagination: (launchesResults: Launches | null) => void;
   handleSearch: (term: string) => void;
 }
 
@@ -17,8 +17,8 @@ export const LaunchContext = createContext({} as LaunchContextValue);
 
 export function LaunchProvider({ children }: { children: ReactNode }) {
   const [searchTerm, setSearchTerm] = useState<string>('');
-  const [launches, setLaunches] = useState<Launch[]>([])
-  const [launchesResults, setLaunchesResults] = useState<Launches | null>(null);
+  const [rocketLaunches, setRocketLaunches] = useState<Launch[]>([])
+  const [launchPagination, setLaunchPagination] = useState<Launches | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   
   const fetchLaunches = useCallback(async (page: number) => {
@@ -31,8 +31,8 @@ export function LaunchProvider({ children }: { children: ReactNode }) {
         response = await launchesService.fetchAllRocketLaunches(searchTerm, page);
       }
 
-      setLaunches(response.results)
-      setLaunchesResults(response)
+      setRocketLaunches(response.results)
+      setLaunchPagination(response)
     } catch (error) {
       toast.error("Nenhum lançamento de foguete encontrado!")
     } finally {
@@ -49,12 +49,12 @@ export function LaunchProvider({ children }: { children: ReactNode }) {
   };
 
   const contextValue = {
-    launches,
-    launchesResults,
+    rocketLaunches,
+    launchPagination,
     isLoading,
     fetchLaunches,
-    setLaunches,
-    setLaunchesResults,
+    setRocketLaunches,
+    setLaunchPagination,
     handleSearch,
   };
 

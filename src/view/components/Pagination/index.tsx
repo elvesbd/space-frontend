@@ -8,10 +8,10 @@ interface EventProps {
 }
 
 export function Pagination() {
-  const { launchesResults, fetchLaunches } = useLaunchContext();
+  const { launchPagination, fetchLaunches } = useLaunchContext();
   const [, setItemOffset] = useState(0);
   const itemsPerPage = 5;
-  const pageCount = launchesResults?.totalPages ?? 0;
+  const pageCount = launchPagination?.totalPages ?? 0;
 
   const handlePageClick = (event: EventProps) => {
     const selectedPage = event.selected + 1;
@@ -22,10 +22,10 @@ export function Pagination() {
 
   return (
     <>
-      {launchesResults && (
+      {launchPagination && (
         <div>
           <LaunchesDetails
-            launches={launchesResults.results}
+            launches={launchPagination.results}
           />
           <div className="mt-10 mb-5">
             <ReactPaginate
