@@ -4,6 +4,7 @@ import { useBarChartStats } from "../../../app/hooks";
 
 export function LaunchBarChart() {
   const { launches, yearKey } = useBarChartStats()
+  console.log(yearKey)
   if (!launches) return  
 
   return (
@@ -32,7 +33,7 @@ export function LaunchBarChart() {
         },
       }}
       colors={
-        ["#000000", "#F57C00", "#1267FC", "#F47560"]
+        ["#3498DB", "#2C3E50", "#E74C3C"]
       }
       groupMode="grouped"
       keys={yearKey}
@@ -47,6 +48,8 @@ export function LaunchBarChart() {
       valueScale={{ type: 'linear' }}
       indexScale={{ type: 'band', round: true }}
       enableLabel={false}
+      isInteractive={false}
+      borderWidth={4}
       labelTextColor={{
         from: 'color',
         modifiers: [
@@ -58,11 +61,11 @@ export function LaunchBarChart() {
       }}
       axisBottom={
         {
-          tickSize: 0,
-          tickPadding: 2,
+          tickSize: 2.5,
+          tickPadding: 1,
+          tickRotation: 63
         }
       }
-      isInteractive={false}
     />
   )
 }

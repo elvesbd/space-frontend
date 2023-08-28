@@ -12,8 +12,11 @@ interface Launches {
 
 class YearlyRocketLaunchStatsMapper {
   static toPersistence(domainLaunch: YearlyRocketLaunchStats): YearlyRocketLaunchStatsBar {
+    const sortedDomainLaunch = [...domainLaunch].sort((a, b) => a.year - b.year);
+    console.log({sortedDomainLaunch})
+
     const launches: Launches[] = [];
-    for (const entry of domainLaunch) {
+    for (const entry of sortedDomainLaunch) {
       const launch: Launches = {
         year: entry.year.toString(),
       };

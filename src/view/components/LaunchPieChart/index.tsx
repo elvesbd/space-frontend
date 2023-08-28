@@ -22,7 +22,7 @@ export function LaunchPieChart() {
         }}
         margin={{ top: 10, right: -50, bottom: 20, left: 80 }}
         colors={
-          ["#000000", "#F57C00", "#1267FC"]
+          ["#3498DB", "#2C3E50", "#E74C3C"]
         }
         enableArcLinkLabels={false}
         isInteractive={false}
