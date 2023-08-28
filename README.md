@@ -64,7 +64,7 @@ Para quaisquer dúvidas ou comentários, sinta-se à vontade para entrar em cont
 
 ## Referência
 
-Este projeto é parte de um desafio proposto pela Coodesh. Para mais informações sobre o desafio, consulte [link para o desafio](https://coodesh.com).
+Este projeto é parte de um desafio proposto pela Coodesh. Para mais informações sobre o desafio, consulte [link para o desafio](https://lab.coodesh.com/elvesbrito/spacex).
 
 ## 📝 Licença
 
