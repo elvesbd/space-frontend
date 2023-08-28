@@ -1,4 +1,4 @@
-# Space X APP
+# SpaceX Rockets App
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
@@ -8,21 +8,35 @@
 ![GitHub issues](https://img.shields.io/github/issues-raw/elvesbd/space-frontend?style=for-the-badge)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/elvesbd/space-frontend?style=for-the-badge)
 
-<img src="https://i.imgur.com/DC6T8S2.png" alt="exemplo imagem">
+<img src="https://i.imgur.com/9dD3XGg.png" alt="exemplo imagem">
 
-# Projeto SpaceX APP
+## Descrição
 
-Bem-vindo ao README do projeto SpaceX APP! Este projeto tem como objetivo fornecer informações sobre os lançamentos da SpaceX e estatísticas dos foguetes.
+Este projeto é uma aplicação React que utiliza o framework React Query para se integrar com a API da SpaceX e fornecer dados estatísticos sobre os lançamentos de foguetes da SpaceX. A aplicação permite aos usuários visualizar gráficos de pizza/setor, resultados de lançamentos, gráficos de colunas por ano, realizar pesquisas por nome/missão/resultado e assistir aos vídeos no YouTube relacionados aos lançamentos.
 
-## Integração com API
+## Tecnologias Utilizadas
 
-## Começando
+- Linguagem: JavaScript (ES6+)
+- Framework: React
+- [vite](https://vitejs.dev/)
+- Estilização: [tailwindcss](https://tailwindcss.com/)
+- Gráficos: [nivo](https://nivo.rocks/)
 
-Para começar com o projeto SpaceX APP, siga estas etapas:
+## Instalação e Uso
 
-1. Clone este repositório para o seu ambiente local.
-2. Instale as dependências necessárias usando `npm install` ou `yarn install`.
-3. Execute o aplicativo usando `npm run dev` ou `yarn dev`.
+1. Clone este repositório: `git clone https://github.com/elvesbd/space-frontend`
+2. Navegue até o diretório do projeto: `cd nome-do-repositorio`
+3. Instale as dependências: `npm install` ou `yarn install`
+4. Inicie o servidor de desenvolvimento: `npm run dev` ou `yarn dev`
+5. Acesse a aplicação em seu navegador: ` http://localhost:5174`
+
+## Funcionalidades
+
+- Visualização de gráfico de pizza/setor sobre lançamentos de foguetes
+- Visualização de resultados de lançamentos (sucesso e falha)
+- Visualização de gráfico de colunas com lançamentos de foguetes por ano
+- Pesquisa por nome, missão e/ou resultado
+- Visualização de vídeo no YouTube ao clicar no ícone
 
 ## Conclusão
 
@@ -43,6 +57,10 @@ Para quaisquer dúvidas ou comentários, sinta-se à vontade para entrar em cont
     </td>
   </tr>
 </table>
+
+## Referência
+
+Este projeto é parte de um desafio proposto pela Coodesh. Para mais informações sobre o desafio, consulte [link para o desafio](https://coodesh.com).
 
 ## 📝 Licença
 
