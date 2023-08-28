@@ -30,6 +30,10 @@ Este projeto é uma aplicação React que utiliza o framework React Query para s
 4. Inicie o servidor de desenvolvimento: `npm run dev` ou `yarn dev`
 5. Acesse a aplicação em seu navegador: ` http://localhost:5174`
 
+## Backend
+
+Certifique-se de que o backend está rodando na porta 3000. O código-fonte do backend pode ser encontrado [aqui](https://github.com/elvesbd/space-backend).
+
 ## Funcionalidades
 
 - Visualização de gráfico de pizza/setor sobre lançamentos de foguetes
