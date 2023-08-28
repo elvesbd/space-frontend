@@ -12,7 +12,7 @@
 
 ## Descrição
 
-Este projeto é uma aplicação React que utiliza o framework React Query para se integrar com a API da SpaceX e fornecer dados estatísticos sobre os lançamentos de foguetes da SpaceX. A aplicação permite aos usuários visualizar gráficos de pizza/setor, resultados de lançamentos, gráficos de colunas por ano, realizar pesquisas por nome/missão/resultado e assistir aos vídeos no YouTube relacionados aos lançamentos.
+Este projeto é uma aplicação React que se integra com uma API que fornece dados estatísticos sobre os lançamentos de foguetes da SpaceX. A aplicação permite aos usuários visualizar gráficos de pizza/setor, resultados de lançamentos, gráficos de colunas por ano, realizar pesquisas por nome/missão/resultado e assistir aos vídeos no YouTube relacionados aos lançamentos.
 
 ## Tecnologias Utilizadas
 
@@ -25,7 +25,7 @@ Este projeto é uma aplicação React que utiliza o framework React Query para s
 ## Instalação e Uso
 
 1. Clone este repositório: `git clone https://github.com/elvesbd/space-frontend`
-2. Navegue até o diretório do projeto: `cd nome-do-repositorio`
+2. Navegue até o diretório do projeto: `cd nome-do-repositório`
 3. Instale as dependências: `npm install` ou `yarn install`
 4. Inicie o servidor de desenvolvimento: `npm run dev` ou `yarn dev`
 5. Acesse a aplicação em seu navegador: ` http://localhost:5174`
