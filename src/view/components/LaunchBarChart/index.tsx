@@ -4,7 +4,6 @@ import { useBarChartStats } from "../../../app/hooks";
 
 export function LaunchBarChart() {
   const { launches, yearKey } = useBarChartStats()
-  console.log(yearKey)
   if (!launches) return  
 
   return (
